@@ -14,7 +14,7 @@ function TodoReducer(state, action) {
     } else if(action.type == 'finish_todo') {
         const newTodoList = state.map(todo => {
             if(todo.id == action.payload.id) {
-                todo.text = action.payload.state;
+                todo.isFinished = action.payload.state;
             }
             return todo;
         })
